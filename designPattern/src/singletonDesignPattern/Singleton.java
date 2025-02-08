@@ -1,8 +1,13 @@
 package singletonDesignPattern;
 
 public class Singleton {
-
-    private static Singleton instance;
+	
+	/*
+	 * Eager initialization: instance is created at class loading time
+     * private static final Singleton instance = new Singleton();
+	 */
+	
+    private static volatile Singleton instance;
     
 	// Private constructor to prevent instantiation
     private Singleton() {
